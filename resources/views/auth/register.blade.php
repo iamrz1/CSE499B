@@ -97,7 +97,8 @@
                             <label for="address" class="col-md-4 control-label">Address</label>
 
                             <div class="col-md-6">
-                                <input id="address" type="text" class="form-control" name="address" value="" >
+                                <input id="address" type="text" class="form-control" name="address" value="Bangladesh" >
+             
                             </div>
                         </div>
 

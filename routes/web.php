@@ -27,6 +27,7 @@ Route::get('/search', 'PostsController@searchBlade');
 Route::get('posts/search', 'PostsController@searchBlade');
 
 Route::resource('posts', 'PostsController');
+Route::resource('users', 'UsersController');
 Route::resource('searchResults', 'SearchController');
 Route::resource('queries', 'QueryController');
 Auth::routes();
