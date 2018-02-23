@@ -21,7 +21,10 @@ class CreatePostsTable extends Migration
             $table->string('size');
             $table->string('lessee');
             $table->string('dispute');
+            $table->integer('added_by');
+            $table->integer('updated_by');
             $table->timestamps();
+            
         });
     }
 

@@ -57,6 +57,8 @@ class PostsController extends Controller
         $post ->size = $request->input ('size');
         $post ->lessee = $request->input ('lessee');
         $post ->dispute = $request->input ('dispute');
+        $post ->added_by = auth()->user()->id;
+        $post ->updated_by = auth()->user()->id;
 
         $post ->save();
         return redirect ('/posts/create')->with ('success','Added Data Successfully.');
@@ -111,6 +113,8 @@ class PostsController extends Controller
         $post ->size = $request->input ('size');
         $post ->lessee = $request->input ('lessee');
         $post ->dispute = $request->input ('dispute');
+        
+        $post ->updated_by = auth()->user()->id;  
 
         $post ->save();
         return redirect ('/posts')->with ('success','Edited Data Successfully.');
