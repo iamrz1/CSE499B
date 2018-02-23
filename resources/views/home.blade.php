@@ -1,0 +1,36 @@
+@extends('layouts.mainLayout')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                    
+					Welcome {{Auth::user()->name}}.
+                    <br>
+
+                    You are logged in!
+                    <br>
+                    @if(Auth::user()->level >=1)
+                    You are an Level {{Auth::user()->level}} Administrator.
+                    <br>
+                    @endif
+                    <script>
+                        var timer = setTimeout(function() {
+                            window.location='/'
+                        }, 2000);
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

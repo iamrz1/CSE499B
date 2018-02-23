@@ -1,0 +1,395 @@
+form
+		{
+		}
+		
+			form .actions
+			{
+				margin-bottom: 0;
+			}
+			
+			form label
+			{
+				display: block;
+			}
+		
+			form input[type="text"],
+			form input[type="email"],
+			form input[type="password"],
+			form select,
+			form .select,
+			form textarea
+			{
+				display: block;
+				box-shadow: inset 0 0 0 1px #e6e6e6;
+				background: #f8f8f8;
+				width: 100%;
+				padding: 0.85em 1em 0.85em 1em;
+				border-radius: 0.25em;
+				border: 0;
+				-moz-transition: all 0.25s ease-in-out;
+				-webkit-transition: all 0.25s ease-in-out;
+				-o-transition: all 0.25s ease-in-out;
+				-ms-transition: all 0.25s ease-in-out;
+				transition: all 0.25s ease-in-out;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				-o-appearance: none;
+				-ms-appearance: none;
+				appearance: none;
+			}
+
+				form input[type="text"]:focus,
+				form input[type="email"]:focus,
+				form input[type="password"]:focus,
+				form select:focus,
+				form .select.focus,
+				form textarea:focus
+				{
+					outline: 0;
+					box-shadow: inset 0 0 0 1px #afd9e0;
+					background: #fcfcfc;
+				}
+
+			form input[type="text"],
+			form input[type="email"],
+			form input[type="password"],
+			form select
+			{
+				line-height: 1.25em;
+			}
+
+			form textarea
+			{
+				min-height: 13em;
+			}
+			
+			form select
+			{
+				position: relative;
+			}
+			
+				form select option:not(:checked)
+				{
+					color: #000;
+				}
+
+			form .select
+			{
+				position: relative;
+				padding: 0;
+				overflow-x: hidden;
+				outline: 0;
+			}
+			
+				form .select select
+				{
+					width: calc(100% + 2em);
+					background: none !important;
+					box-shadow: none !important;
+					border: 0 !important;
+					cursor: pointer;
+				}
+				
+				form .select select::-moz-focus-inner
+				{
+					border: 0;
+					outline: 0;
+				}
+				
+				form .select:before
+				{
+					content: '';
+					position: absolute;
+					top: 15%;
+					right: 1em;
+					width: 1.25em;
+					height: 75%;
+					background: url('images/arrow.svg') center center no-repeat;
+					background-size: contain;
+					z-index: 0;
+				}
+
+					form .select select::-ms-expand
+					{
+						display: none;
+					}
+
+					.dark form .select:before
+					{
+						background: url('images/dark-arrow.svg') center center no-repeat;
+						background-size: contain;
+					}
+			
+			form ::-moz-focus-inner
+			{
+				border: 0;
+			}
+
+			form .formerize-placeholder { color: #555 !important; }
+			form ::-webkit-input-placeholder { color: #aaa !important; }
+			form :-moz-placeholder { color: #555 !important; }
+			form ::-moz-placeholder { color: #555 !important; }
+			form :-ms-input-placeholder { color: #555 !important; }
+
+		.dark form
+		{
+		}
+
+			.dark form input[type="text"],
+			.dark form input[type="email"],
+			.dark form input[type="password"],
+			.dark form select,
+			.dark form .select,
+			.dark form textarea
+			{
+				background: none;
+				box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+				color: #fff;
+			}
+
+				.dark form input[type="text"]:focus,
+				.dark form input[type="email"]:focus,
+				.dark form input[type="password"]:focus,
+				.dark form select:focus,
+				.dark form .select.focus,
+				.dark form textarea:focus
+				{
+					background: rgba(255,255,255,0.1);
+					box-shadow: inset 0 0 0 1px #fff;
+				}
+			
+			.dark form .formerize-placeholder { color: #aaa !important; color: rgba(255,255,255,0.85) !important; }
+			.dark form ::-webkit-input-placeholder { color: rgba(255,255,255,0.85) !important; }
+			.dark form :-moz-placeholder { color: rgba(255,255,255,0.85) !important; }
+			.dark form ::-moz-placeholder { color: rgba(255,255,255,0.85) !important; }
+			.dark form :-ms-input-placeholder { color: rgba(255,255,255,0.85) !important; }
+			
+	/* Table */
+	
+		table
+		{
+			width: 100%;
+		}
+		
+			table.default
+			{
+				width: 100%;
+				border-collapse: collapse;
+			}
+
+				table.default tbody
+				{
+				}
+
+				table.default tbody tr
+				{
+					border: solid 1px #e6e6e6;
+				}
+			
+				table.default tbody tr:nth-child(2n+2)
+				{
+					background: #f8f8f8;
+				}
+				
+				table.default td
+				{
+					padding: 0.5em 1em 0.5em 1em;
+				}
+				
+				table.default th
+				{
+					text-align: left;
+					padding: 0.5em 1em 1em 1em;
+				}
+			
+				table.default thead
+				{
+				}
+
+				table.default tfoot
+				{
+				}
+				
+					table.default tfoot td
+					{
+						padding-top: 1em;
+					}
+				
+				table.default tbody
+				{
+				}
+
+			.dark table.default
+			{
+			}
+
+				.dark table.default tbody
+				{
+				}
+			
+					.dark table.default tbody tr
+					{
+						border-color: rgba(255,255,255,0.5);
+					}
+				
+					.dark table.default tbody tr:nth-child(2n+2)
+					{
+						background: rgba(255,255,255,0.1);
+					}
+	
+	/* Button */
+		
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button
+		{
+			-webkit-appearance: none;
+			position: relative;
+			display: inline-block;
+			background: #3d3d3d;
+			padding: 0.85em 3em 0.85em 3em;
+			border-radius: 0.25em;
+			cursor: pointer;
+			border: 0;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+			-moz-transition: all 0.25s ease-in-out;
+			-webkit-transition: all 0.25s ease-in-out;
+			-o-transition: all 0.25s ease-in-out;
+			-ms-transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
+		}
+
+			input[type="button"]:hover,
+			input[type="submit"]:hover,
+			input[type="reset"]:hover,
+			.button:hover
+			{
+				background: #4f4f4f;
+			}
+			
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		.button.alt
+		{
+			color: inherit;
+			box-shadow: inset 0 0 0 1px #e6e6e6;
+			background: none;
+		}
+		
+			input[type="button"].alt:hover,
+			input[type="submit"].alt:hover,
+			input[type="reset"].alt:hover,
+			.button.alt:hover
+			{
+				background: rgba(0,0,0,0.025);
+			}
+
+			.dark input[type="button"],
+			.dark input[type="submit"],
+			.dark input[type="reset"],
+			.dark .button
+			{
+				background: rgba(255,255,255,0.15);
+				box-shadow: inset 0 0 0 1px #fff;
+				color: #fff;
+			}
+			
+				.dark input[type="button"]:hover,
+				.dark input[type="submit"]:hover,
+				.dark input[type="reset"]:hover,
+				.dark .button:hover
+				{
+					background: rgba(255,255,255,0.25);
+				}
+
+			.dark input[type="button"].alt,
+			.dark input[type="submit"].alt,
+			.dark input[type="reset"].alt,
+			.dark .button.alt
+			{
+				background: none;
+				box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+			}
+
+				.dark input[type="button"].alt:hover,
+				.dark input[type="submit"].alt:hover,
+				.dark input[type="reset"].alt:hover,
+				.dark .button.alt:hover
+				{
+					background: rgba(255,255,255,0.15);
+					box-shadow: inset 0 0 0 1px #fff;
+				}
+
+	/* Feature Icon */
+
+		.feature-icon
+		{
+			display: inline-block;
+			position: relative;
+			padding-bottom: 3em;
+			margin-bottom: 1 em;
+			cursor: default;
+		}
+		
+			.feature-icon .icon
+			{
+				display: inline-block;
+				width: 2em;
+				height: 2em;
+				font-size: 4.5em;
+				border-radius: 100%;
+				box-shadow: inset 0 0 0 1px #666;
+				color: #666;
+				line-height: 2.1em;
+			}
+		
+			.feature-icon:before
+			{
+				content: '';
+				background: #666;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: -0.325em;
+				width: 0.65em;
+				height: 0.65em;
+				display: block;
+				border-radius: 100%;
+			}
+
+			.feature-icon:after
+			{
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: 0.65em;
+				width: 1px;
+				height: 4.35em;
+				background: #666;
+				margin-left: -0.5px;
+			}
+
+			.dark .feature-icon
+			{
+			}
+
+				.dark .feature-icon .icon
+				{
+					background: rgba(255,255,255,0.15);
+					box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+					color: #fff;
+				}
+			
+				.dark .feature-icon:before
+				{
+					background: rgba(255,255,255,0.5);
+				}
+
+				.dark .feature-icon:after
+				{
+					background: rgba(255,255,255,0.5);
+				}
