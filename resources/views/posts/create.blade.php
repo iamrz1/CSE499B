@@ -78,7 +78,7 @@
 
                                 <div class="form-group">
                                     <div class="col-md-4 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary btn-lg">
                                      Add Entry
                                     </button>
                                     </div>

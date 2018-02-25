@@ -23,6 +23,9 @@ class PagesController extends Controller
     public function services(){
         return view ('pages/services');
     }
+    public function account(){
+        return view ('pages/account');
+    }
     public function search(){
         return view ('pages/postSearch');
     }

@@ -69,18 +69,12 @@
                         <a href="{{url('about')}}"> About</a>
                     </li>
 					@auth
-						@if(Auth::user()->level > 1) <!-- Level 5 users can add data -->
-							<li class="{{ Request::is('posts') ? 'active' : '' }}">
-								<a href="/posts"> All Entries</a>
-							</li>
-						@endif
-					
-					
-						@if(Auth::user()->level >= 5) <!-- Level 5 users can add data -->
-							<li class="{{ Request::is('posts/create') ? 'active' : '' }}">
-								<a href="/posts/create"><span class="glyphicon glyphicon-list-alt"></span> Add Data</a>
-							</li>
-						@endif
+
+				
+						<li class="{{ Request::is('account') ? 'active' : '' }}">
+							<a href="/account"><span class="glyphicon glyphicon-tasks"></span> My Account</a>
+						</li>
+
 					@endauth
                 </ul>
                 <ul class="nav navbar-nav navbar-right col-sm-4">
@@ -98,8 +92,8 @@
 							<li class="{{ Request::is('search') ? 'active' : '' }}">
 								<a href="/search"><span class="glyphicon glyphicon-search"></span>Search</a>
 							</li>
-                            <li > 
-								<a href="" > {{ Auth::user()->name }}  </a>
+                            <li class="{{ Request::is('users') ? 'active' : '' }}"> 
+								<a href="/users/{{Auth::user()->id}}" > {{ Auth::user()->name }}  </a>
 							</li>
 							
 

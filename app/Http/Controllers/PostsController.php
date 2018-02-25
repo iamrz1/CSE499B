@@ -61,7 +61,7 @@ class PostsController extends Controller
         $post ->updated_by = auth()->user()->id;
 
         $post ->save();
-        return redirect ('/posts/create')->with ('success','Added Data Successfully.');
+        return redirect ('/account')->with ('success','Added Data Successfully.');
     }
 
     /**
@@ -117,7 +117,7 @@ class PostsController extends Controller
         $post ->updated_by = auth()->user()->id;  
 
         $post ->save();
-        return redirect ('/posts')->with ('success','Edited Data Successfully.');
+        return redirect ('/account')->with ('success','Edited Data Successfully.');
     }
 
     /**
@@ -131,7 +131,8 @@ class PostsController extends Controller
         //
         $post = Post::find($id) ;
         $post->delete();
-        return redirect ('/posts')->with ('success','Removed Data Successfully.');
+        return redirect ('/account')->with ('success','Removed Data Successfully.');
+        
 
     }
 

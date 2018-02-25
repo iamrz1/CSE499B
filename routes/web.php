@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
+Route::get('/account', 'PagesController@account');
 //Route::get('/login', 'PagesController@login');
 //Route::get('/register', 'PagesController@register');
 Route::get('/services', 'PagesController@services');

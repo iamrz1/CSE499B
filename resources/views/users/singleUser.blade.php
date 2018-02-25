@@ -5,13 +5,10 @@
 				<header>
 
 					<div class = " ">
-						<div class = " ">
-							<img src="{{asset('images/logo.png')}}" alt="Smiley face" >
-						</div>
 					</div>
 					<div class="container">
 					@auth
-						@if(Auth::user()->level <3) <!-- Level 5 users can add data -->
+						@if(Auth::user()->level <0) <!-- Level 5 users can add data -->
 						<p>You're not authorised to vist this page</p>
 						@else
 							<h1>User Info: </h1>
@@ -21,8 +18,9 @@
 							
 							<small> Name : {{$user->name}} </small><br>
 							<small>Email : {{$user->email}} </small><br>
-							<small>Phone: {{$user->phone}} Sq Meters</small><br>
+							<small>Phone: {{$user->phone}} </small><br>
 							<small>Address : {{$user->address}} </small><br>
+							<small>User Level : {{$user->level}} </small><br>
                             
 							<small>Edited by Admin : {{$user->admin_edited}} </small><br>
                             <small>User Created at : {{$user->created_at}} </small><br>

@@ -27,10 +27,10 @@
 							<small>Post Created at : {{$post->created_at}} </small><br>
 
 							@if(Auth::user()->level >3)
-							<a href = "/posts/{{$post->id}}/edit" class ="btn btn-default">Edit Data</a>
+							<a href = "/posts/{{$post->id}}/edit" class ="btn btn-info btn-lg">Edit Data</a>
 							{!!Form::open(['action'=>['PostsController@destroy',$post->id],'method'=>'POST' ])!!}
 								{{Form::hidden('_method','DELETE')}}
-								{{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+								{{Form::submit('Delete',['class'=>'btn'])}}
 							{!!Form::close()!!}
 							<hr>
 							@endif

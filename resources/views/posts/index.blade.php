@@ -10,6 +10,7 @@
 						</div>
 					</div>
 					<div class="container">
+					@include ('layouts.errors')
 					@guest
 					<h1>You are not logged in!</h1>
 					@endguest
@@ -24,7 +25,7 @@
                             
 							@if (count($posts)>0)
 								@foreach ($posts as $post)
-									<h3>Post ID =  dbe{{$post->id}}</a></h3>
+									<h3>Post ID =  lnd{{$post->id}}</a></h3>
 								
 									<small>Land Category : {{$post->category}}</small>
 									<small>, Mouja / Location : {{$post->mouja}}</small>
@@ -33,7 +34,7 @@
 									<small> Lessee : {{$post->lessee}} </small>
 									<small>, Dispute Status : {{$post->dispute}}</small>
 									<br>
-									<a href = "/posts/{{$post->id}}" class ="btn btn-default">Details</a>
+									<a href = "/posts/{{$post->id}}" class ="btn btn-info btn-lg">Details</a>
 									
 									<br>
 									<hr>

@@ -19,7 +19,7 @@
 					<p>You're not authorised to visit this page</p>
 				@else
                     <div class="container">
-                            <h1>Create a new Land Entry</h1>
+                            <h1>Edit Land Entry</h1>
                         </div>
                     </header>
                     <hr>
