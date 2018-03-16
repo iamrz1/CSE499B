@@ -12,7 +12,8 @@
 
 	body
 	{
-		background: #F8F8F8;
+		background: #232323;
+		
 	}
 
 		body.is-loading *
@@ -38,6 +39,7 @@
 		color: #888;
 		-webkit-text-stroke: 0.1px;
 	}
+
 	input,textarea,select{
 	-webkit-text-stroke: 0.1px;
     height: 50px;
@@ -582,11 +584,12 @@
 /* Header                                                                        */
 /*********************************************************************************/
 
+
 	#header
 	{
 		position: relative;
 		margin: 0;
-		background-image:			url('images/overlay.png'),			url('../images/header.jpg');
+		background-color: cadetblue;
 		background-size:			auto,								cover;
 		background-position:		top left,							center center;
 		background-repeat:			repeat,								no-repeat;
@@ -594,6 +597,9 @@
 		text-align: center;
 		color: #fff;
 	}
+
+
+
 	
 		#header header
 		{
@@ -672,36 +678,7 @@
 				background: #433;
 			}
 			
-			.main > .content.style1
-			{
-				background:	url('images/bgtr.svg') top right no-repeat,
-							url('images/bgbl.svg') bottom left no-repeat,
-							url('images/bgbl.svg') bottom left no-repeat,
-							url('images/overlay.png'),
-							linear-gradient(45deg, #b39c68, #a56365, #412e4c);
-			}
-
-			.main > .content.style2
-			{
-				background:	url('images/bgtr.svg') top right no-repeat,
-							url('images/bgbl.svg') bottom left no-repeat,
-							url('images/overlay.png'),
-							linear-gradient(45deg, #384955, #655361, #85505f);
-			}
-
-			.main > .content.style3
-			{
-				background:	url('images/bgtr.svg') top right no-repeat,
-							url('images/bgbl.svg') bottom left no-repeat,
-							url('images/overlay.png'),
-							linear-gradient(45deg, #5f796b, #3a4e59, #2f394e);
-			}
-
-			.main > .content.style4
-			{
-				padding-top: 0;
-				background: #fff;
-			}
+			
 
 /*********************************************************************************/
 /* Footer                                                                        */
@@ -836,6 +813,17 @@
 	
 	border-radius:0;
 }
+@media screen and (max-width:767px) {  
+
+	.navbar-fixed-top,
+	.navbar-fixed-bottom {
+	  position: relative;
+	  right: 0;
+	  left: 0;
+	  z-index: 1030;
+	}
+  }
+
 #footer ul{
 	    list-style-type: none;
     margin: 0;
@@ -898,6 +886,14 @@ display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
 }
+.nav{
+font-size: 17px;
+}
+@media (max-width:767px) {
+	.nav.navbar-nav.pull-right {
+	  float: left !important;
+	}
+   } 
 
  .nav_placeholder{
 	height: 91px;
@@ -913,21 +909,21 @@ display: inline-block;
 @media screen and (max-width:767px) {  
 
 	.nav_placeholder{
-		height: 237px;
+		height: 0px;
 		background-color:black;
 	}
   }
 @media screen and (max-width:479px) {  
 
 	.nav_placeholder{
-		height: 188px;
+		height: 0px;
 		background-color:black;
 	}
   }
 @media screen and (max-width:319px) {  
 
 	.nav_placeholder{
-		height: 236px;
+		height: 0px;
 		background-color:black;
 	}
   }

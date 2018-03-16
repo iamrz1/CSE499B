@@ -1,4 +1,4 @@
-<!--  ===============================     Header   =================================-->
+
 <!DOCTYPE HTML>
 <!--
 		KhashLand
@@ -37,104 +37,99 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="{{asset('css/ie/v9.css')}}" /><![endif]-->
 	</head>
 	<body class= "">
+        <div class="container-fluid">
 		
-		<!-- Navbar -->
-		
-		
+        <!-- Navbar -->
+        
+        <nav class="navbar navbar-inverse custom-navbar navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+              <!-- Branding Image -->
 
-
-        <nav class="topnav navbar navbar-inverse navbar-fixed-top">
-                
-            <div class="logo">
-            
-                <img src="{{asset('images/logo.png')}}" alt="Smiley face" height="60em" >
-
+              <a class="navbar-brand " href="{{ url('/') }}">
+                <span class="glyphicon glyphicon-home">   </span>   {{ config('app.name', 'Laravel') }}    
+              </a>   
             </div>
-            <div class="container-full">
+            
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="{{ Request::is('/') ? 'active' : '' }}">
+                        <a href="{{ url('/') }}">Home</a>
+                    </li>
+                    <li class="{{ Request::is('services') ? 'active' : '' }}">
+                        <a href="{{ url('services') }}">Services</a>
+                    </li>
                 
-
-                <div class="navbar-header col-sm-3">
-                    <p class="hidden_text" > KhashLand</p>
-                    <a class="navbar-brand" href="/">KhashLand.com</a>
-                </div>
-                <ul class="nav navbar-nav col-sm-5 " >
-					<li class="{{ Request::is('/') ? 'active' : '' }}">
-						<a href="{{ url('/') }}">Home</a>
-					</li>
-					<li class="{{ Request::is('services') ? 'active' : '' }}">
-						<a href="{{ url('services') }}">Services</a>
-					</li>
-                   
                     <li class="{{ Request::is('about') ? 'active' : '' }}">
                         <a href="{{url('about')}}"> About</a>
                     </li>
-					@auth
+                    @auth
+                        <li class="{{ Request::is('search') ? 'active' : '' }}">
+                            <a href="/search"><span class="glyphicon glyphicon-search"></span>Search</a>
+                        </li>
 
-				
-						<li class="{{ Request::is('account') ? 'active' : '' }}">
-							<a href="/account"><span class="glyphicon glyphicon-tasks"></span> My Account</a>
-						</li>
 
-					@endauth
+                    @endauth
                 </ul>
-                <ul class="nav navbar-nav navbar-right col-sm-4">
+                <ul class="nav navbar-nav pull-right">
+                    @guest
+                    <li class="{{ Request::is('login') ? 'active' : '' }}">
+                        <a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"> </span> Login</a>
+                    </li>
 
-					 <!-- Authentication Links -->
-					 @guest
-                            <li class="{{ Request::is('login') ? 'active' : '' }}">
-								<a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"> </span> Login</a>
-							</li>
-                            <li class="{{ Request::is('register') ? 'active' : '' }}">
-								<a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Register</a>
-							</li>
-					@endguest
-					@auth
-							<li class="{{ Request::is('search') ? 'active' : '' }}">
-								<a href="/search"><span class="glyphicon glyphicon-search"></span>Search</a>
-							</li>
-                            <li class="{{ Request::is('users') ? 'active' : '' }}"> 
-								<a href="/users/{{Auth::user()->id}}" > {{ Auth::user()->name }}  </a>
-							</li>
-							
+                    <li class="{{ Request::is('register') ? 'active' : '' }}">
+                        <a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Register</a>
+                    </li>
 
-							<li >      
-								<a href="{{ route('logout') }}"
-									onclick="event.preventDefault();
-												document.getElementById('logout-form').submit();">
-									<small>[Logout]</small>
-								</a>
+                    @endguest
+                    @auth
 
-								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-									{{ csrf_field() }}
-								</form>
-                                    
+                
+                        <li class="{{ Request::is('account') ? 'active' : '' }}">
+                            <a href="/account"><span class="glyphicon glyphicon-tasks"></span> My Account</a>
+                        </li>
+
+                        <li class="{{ Request::is('users') ? 'active' : '' }}"> 
+                            <a href="/users/{{Auth::user()->id}}" > {{ Auth::user()->name }}  </a>
+                        </li>
+
+
+                        <li >      
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                <small>[Logout]</small>
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                                 
-							</li>
-							
-					@endauth
-                    </ul>
-                   
+                            
+                        </li>
+                    @endauth
                 </ul>
-
             </div>
-        </nav>
-                
-                
-                <div class="container-fluid ">
 
-                <div class="row">
-                        <div class="col-sm-12 nav_placeholder" ">
-                        
-                        </div>
-                </div>
-                </div>
+          </nav>
 
 
 
+        <!-- End Navbar -->
+        <!-- Nav Placeholder -->
+        <div class="container-fluid ">
 
-
-                                    <!--- ========== contents goes here ==== -->
-
+            <div class="row">
+                    <div class="col-sm-12 nav_placeholder" ">
+                    
+                    </div>
+            </div>
+        </div>
+        
         @yield('content')
 
         <!-- Footer -->
@@ -165,6 +160,7 @@
 
 			</div>
 		</section>
-
+    </div>
 	</body>
 </html>
+

@@ -1,14 +1,13 @@
 
+@desktop
 @extends ('layouts/mainLayout')
+@enddesktop
+
 
 @section ('content')
 
-
 <div class="container-full">
 
-					
-
-			
 			<div id="myCarousel" class=" carousel slide " data-ride="carousel">
 			  <!-- Indicators -->
 			  <ol class="carousel-indicators">
@@ -51,12 +50,7 @@
 				</div>
 				
 
-                
-				
-				
-				
-				
-				
+		
 			  </div>
 	<br>
 
